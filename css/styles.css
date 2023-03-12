@@ -10,6 +10,10 @@
   --color-social-link-footer: #31d0aa;
   --color-icon: #8e8f99;
   --color-modal: #fcfcfc;
+  --color-form-info: #8e8f99;
+  --color-accept-info: #757575;
+  --color-modal-border: rgba(33, 33, 33, 0.2);
+  --color-placeholder: rgba(117, 117, 117, 0.5);
 }
 body {
   background-color: var(--color-site);
@@ -30,6 +34,13 @@ h6 {
 }
 a {
   text-decoration: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Roboto", sans-serif;
 }
 /* header */
 .header {
@@ -90,7 +101,7 @@ ul {
 .link-in {
   display: block;
   position: relative;
-  padding: 24px 0 ;
+  padding: 24px 0;
   color: var(--color-brand);
   transition-property: color;
   transition-duration: 250ms;
@@ -377,6 +388,49 @@ img {
 .under-container {
   display: flex;
 }
+.subscribe-container {
+  position: relative;
+  margin-left: 80px;
+}
+.subscribe-email {
+  width: 262px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--color-site);
+  padding-left: 16px;
+  outline: none;
+}
+.subscribe-email:focus {
+  border: 1px solid var(--color-primary);
+}
+
+.subscriber-button {
+  position: relative;
+  width: 165px;
+  height: 40px;
+  display: inline;
+  text-align: center;
+  padding: 0;
+  display: inline;
+  margin-left: 24px;
+  padding-left: 24px;
+  padding-right: 64px;
+}
+.accept-subscribe {
+  position: relative;
+  display: flex;
+}
+.icon-subscribe {
+  position: absolute;
+  top: 53px;
+  left: 406px;
+  width: 24px;
+  height: 24px;
+  fill: var(--color-site);
+}
 /* footer-link */
 .social-media-footer {
   margin-left: 120px;
@@ -574,7 +628,7 @@ img {
   width: 100%;
   height: 100%;
   max-width: 408px;
-  max-height: 576px;
+  max-height: 598px;
   background-color: var(--color-modal);
   transition: transform 500ms;
 }
@@ -597,8 +651,140 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close {
   width: 8px;
   height: 8px;
+}
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--color-background);
+  fill: var(--color-site);
+}
+/* form */
+.form {
+  position: absolute;
+  top: 48px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+}
+.form-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.container-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+.form-info {
+  color: var(--color-form-info);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+}
+.confidential-info {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 3px 0px 3px 34px;
+  border: 1px solid var(--color-modal-border);
+  outline: none;
+}
+.confidential-info:focus {
+  border: 1px solid var(--color-primary);
+}
+.confidential-info:focus + .form-icon {
+  fill: var(--color-primary);
+}
+
+.form-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 11px;
+  left: 16px;
+}
+
+.textarea {
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 1.16;
+  height: 120px;
+  border-radius: 4px;
+  padding: 8px 0 0 16px;
+  letter-spacing: 0.04em;
+  margin: 0;
+  border: 1px solid var(--color-modal-border);
+}
+.textarea::placeholder {
+  padding: 8px 16px;
+  color: var(--color-placeholder);
+}
+
+.accept-info {
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--color-accept-info);
+  padding-left: 24px;
+}
+.dox-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.mark-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+.accept-box {
+  appearance: none;
+}
+
+.submit-button {
+  width: 169px;
+}
+.chekbox {
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+}
+
+.accept-box:checked + .mark-icon {
+  opacity: 1;
+  fill: var(--color-site);
+  background: #404bbf;
+  border: 1.25px solid #404bbf;
+}
+
+.polise {
+  text-decoration-line: underline;
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+}
+.user-name-icon {
+  position: relative;
 }
