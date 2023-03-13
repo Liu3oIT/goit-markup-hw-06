@@ -267,13 +267,16 @@
             </li>
           </ul>
         </div>
-        <div class="subscribe-container">
+        <form class="subscribe-container" name="send-subscride" autocomplete="on" novalidate>
           <h3 class="social-media">Subscribe</h3>
-          <input class="subscribe-email" type="email" name="email" id="email" placeholder="E-mail">
-          <button class="hero-button subscriber-button" type="submit">Subscribe</button>
-          <svg class="icon-subscribe">
-            <use href="./images/icon.svg#icon-subscribe"></use>
-          </svg>
+          <div class="subscribe">
+          <input class="subscribe-email" type="email" name="user-email" id="email" placeholder="E-mail">
+          <button class="hero-button subscriber-button" type="submit">Subscribe
+            <svg class="icon-subscribe">
+              <use href="./images/icon.svg#icon-subscribe"></use>
+            </svg>
+          </button>
+        </form>
         </div>
       </div>
     </div>
