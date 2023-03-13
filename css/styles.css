@@ -411,28 +411,28 @@ img {
 }
 
 .subscriber-button {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 165px;
   height: 40px;
-  display: inline;
   text-align: center;
   padding: 0;
-  display: inline;
   margin-left: 24px;
-  padding-left: 24px;
-  padding-right: 64px;
+  gap: 16px;
+
 }
 .accept-subscribe {
-  position: relative;
   display: flex;
 }
 .icon-subscribe {
-  position: absolute;
-  top: 53px;
-  left: 406px;
   width: 24px;
   height: 24px;
   fill: var(--color-site);
+}
+.subscribe {
+  display: flex;
+  justify-content: center;
 }
 /* footer-link */
 .social-media-footer {
@@ -629,9 +629,9 @@ img {
   position: relative;
   overflow: auto;
   width: 100%;
-  height: 100%;
+
   max-width: 408px;
-  max-height: 598px;
+  min-height: 584px;
   background-color: var(--color-modal);
   transition: transform 500ms;
 }
@@ -669,12 +669,8 @@ img {
 }
 /* form */
 .form {
-  position: absolute;
-  top: 48px;
-  left: 0px;
-  right: 0;
-  bottom: 0;
-  padding: 24px;
+  
+  padding:72px 24px 24px;
 }
 .form-title {
   text-align: center;
@@ -698,7 +694,7 @@ img {
   letter-spacing: 0.04em;
 }
 .confidential-info {
-  position: relative;
+ 
   height: 40px;
   width: 100%;
   border-radius: 4px;
@@ -726,7 +722,6 @@ img {
 
 .textarea {
   resize: none;
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
   line-height: 1.16;
   height: 120px;
@@ -737,7 +732,7 @@ img {
   border: 1px solid var(--color-modal-border);
 }
 .textarea::placeholder {
-  padding: 8px 16px;
+
   color: var(--color-placeholder);
 }
 
@@ -757,8 +752,8 @@ img {
 }
 .mark-icon {
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   top: 0px;
   left: 0px;
   opacity: 0;
@@ -770,9 +765,9 @@ img {
 .submit-button {
   width: 169px;
 }
-.chekbox {
-  width: 16px;
-  height: 16px;
+.chekbox-style {
+  width: 14px;
+  height: 14px;
   border: 1.25px solid #2e2f42;
   border-radius: 2px;
 }
